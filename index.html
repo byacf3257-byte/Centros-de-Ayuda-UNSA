@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2b0b43">
+  <meta name="description" content="Centros de Ayuda UNSA: canales de orientación y atención dentro de la universidad y a nivel nacional.">
+  <title>Centros de Ayuda | UNSA</title>
+  <style>
+    :root{
+      --bg:#180625; --panel:#2a0d40; --panel2:#35124d;
+      --purple:#8d43ad; --pink:#ed79bd; --orange:#ff9a28;
+      --white:#fffaff; --muted:#ddcce8; --line:#70418a;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+      color:var(--white); background:
+      radial-gradient(circle at 85% 5%,rgba(237,121,189,.18),transparent 28rem),
+      radial-gradient(circle at 0% 35%,rgba(141,67,173,.2),transparent 25rem),var(--bg);
+      line-height:1.5;
+    }
+    .wrap{width:min(100% - 28px,760px);margin:auto}
+    header{padding:26px 0 18px;text-align:center}
+    .brand{display:inline-flex;align-items:center;gap:9px;color:#f7dff2;font-weight:800;letter-spacing:.09em;font-size:.78rem}
+    .brand-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:13px;background:#fff;color:#672c83;font-size:1.2rem}
+    h1{font-size:clamp(2rem,8vw,3.5rem);line-height:1.02;margin:22px 0 8px;letter-spacing:-.04em}
+    h1 span{color:var(--pink)}
+    .intro{max-width:560px;margin:0 auto;color:var(--muted);font-size:1rem}
+    .notice{margin:20px 0 18px;padding:13px 15px;border:1px solid #8e559f;border-radius:15px;background:rgba(53,18,77,.8);color:#f7eafa;font-size:.9rem}
+    nav{position:sticky;top:0;z-index:5;padding:10px 0;background:rgba(24,6,37,.92);backdrop-filter:blur(12px)}
+    .tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .tab{border:1px solid var(--line);border-radius:12px;padding:12px 8px;text-align:center;text-decoration:none;color:var(--white);font-weight:750;font-size:.92rem}
+    .tab:first-child{background:linear-gradient(120deg,#743b91,#51256d)}
+    .tab:last-child{background:linear-gradient(120deg,#a94a80,#bd641e)}
+    main{padding:14px 0 32px}
+    .section{scroll-margin-top:82px;margin:18px 0 28px}
+    .section-title{display:flex;align-items:center;gap:10px;margin:0 0 6px;font-size:1.45rem}
+    .section-title .dot{width:11px;height:11px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 5px #ed79bd22}
+    .section-sub{margin:0 0 14px;color:var(--muted);font-size:.9rem}
+    .card{background:linear-gradient(145deg,rgba(53,18,77,.98),rgba(37,10,57,.98));border:1px solid #6d4382;border-radius:18px;padding:17px;margin:12px 0;box-shadow:0 12px 30px #09010f33}
+    .card h3{margin:0 0 5px;font-size:1.08rem}
+    .card p{margin:5px 0;color:var(--muted);font-size:.92rem}
+    .tag{display:inline-block;color:#ffd4eb;background:#6b2d69;border:1px solid #a64b91;border-radius:999px;padding:3px 9px;font-size:.72rem;font-weight:750;margin-bottom:8px}
+    .contact{font-weight:750;color:#fff;font-size:.96rem;overflow-wrap:anywhere}
+    .actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:13px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;text-decoration:none;border-radius:11px;padding:10px 13px;font-size:.88rem;font-weight:750;color:#240b34;background:#ffe8f5}
+    .btn.alt{background:#ffad43;color:#32102e}
+    .btn.outline{background:transparent;border:1px solid #b77ac9;color:#fff}
+    .number{font-size:2rem;font-weight:900;letter-spacing:-.04em;color:var(--orange);line-height:1.1;margin:5px 0}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .mini{padding:14px;border-radius:15px;background:#ffffff0b;border:1px solid #70418a}
+    .mini h3{font-size:.98rem}
+    .mini .number{font-size:1.8rem}
+    .footer{text-align:center;padding:24px 0 35px;border-top:1px solid #603675;color:var(--muted)}
+    .footer strong{display:block;color:white;letter-spacing:.04em}
+    .small{font-size:.78rem;color:#cdb6d9}
+    a:focus-visible{outline:3px solid #ffd166;outline-offset:3px}
+    @media(min-width:620px){
+      .cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+      .cards .card{margin:0}
+      .section-title{font-size:1.7rem}
+    }
+    @media(max-width:390px){.split{grid-template-columns:1fr}.tab{font-size:.82rem}}
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="brand"><span class="brand-mark">✦</span> UNIVERSIDAD NACIONAL DE SAN AGUSTÍN</div>
+    <h1>CENTROS DE <span>AYUDA</span></h1>
+    <p class="intro">No estás sola. Encuentra orientación, acompañamiento y canales oficiales de atención dentro de la UNSA y a nivel nacional.</p>
+    <div class="notice">💜 Si no sabes a qué servicio acudir, puedes comenzar solicitando orientación a la Defensoría Universitaria. Si hay peligro inmediato, busca un lugar seguro y llama a emergencias.</div>
+  </header>
+
+  <nav>
+    <div class="wrap tabs">
+      <a class="tab" href="#unsa">AYUDA EN LA UNSA</a>
+      <a class="tab" href="#nacional">AYUDA NACIONAL</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section class="section" id="unsa">
+      <h2 class="section-title"><span class="dot"></span> Dentro de la UNSA</h2>
+      <p class="section-sub">Canales de orientación y atención de la comunidad universitaria.</p>
+      <div class="cards">
+        <article class="card">
+          <span class="tag">CONTACTO PRINCIPAL</span>
+          <h3>Defensoría Universitaria</h3>
+          <p>Orientación sobre derechos universitarios, atención de consultas y derivación a las instancias correspondientes.</p>
+          <p class="contact">☎ 932 907 594</p>
+          <p class="contact">✉ defensoria@unsa.edu.pe</p>
+          <p class="small">Horario publicado: lunes a viernes, 8:00 a. m. a 3:30 p. m.</p>
+          <div class="actions">
+            <a class="btn" href="https://www.unsa.edu.pe/defensoria-universitaria/" target="_blank" rel="noopener">Web oficial ↗</a>
+            <a class="btn outline" href="mailto:defensoria@unsa.edu.pe">Enviar correo</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Secretaría de Instrucción</h3>
+          <p>Instancia relacionada con la atención y tramitación de denuncias por hostigamiento sexual en la universidad.</p>
+          <p class="contact">✉ pihs_secretariainstruccion@unsa.edu.pe</p>
+          <div class="actions">
+            <a class="btn outline" href="mailto:pihs_secretariainstruccion@unsa.edu.pe">Contactar por correo</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Bienestar Universitario</h3>
+          <p>Consulta por orientación y servicios de bienestar, apoyo psicológico y social.</p>
+          <p class="contact">✉ bienestar_consulta@unsa.edu.pe</p>
+          <div class="actions">
+            <a class="btn outline" href="mailto:bienestar_consulta@unsa.edu.pe">Contactar por correo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="nacional">
+      <h2 class="section-title"><span class="dot" style="background:var(--orange)"></span> Ayuda a nivel nacional</h2>
+      <p class="section-sub">Servicios públicos gratuitos de orientación y atención en el Perú.</p>
+      <div class="cards">
+        <article class="card">
+          <h3>Línea 100</h3>
+          <div class="number">100</div>
+          <p>Orientación telefónica gratuita, las 24 horas, todos los días.</p>
+          <div class="actions"><a class="btn alt" href="tel:100">Llamar al 100</a></div>
+        </article>
+        <article class="card">
+          <h3>Chat 100</h3>
+          <p>Orientación virtual, gratuita y confidencial. El portal puede mostrar primero información del servicio antes de ingresar al chat.</p>
+          <div class="actions"><a class="btn alt" href="https://chat100.aurora.gob.pe/" target="_blank" rel="noopener">Abrir Chat 100 ↗</a></div>
+        </article>
+        <article class="card">
+          <h3>Centros Emergencia Mujer y Familia</h3>
+          <p>Atención especializada psicológica, legal y social. Consulta la información de centros en Arequipa.</p>
+          <div class="actions">
+            <a class="btn alt" href="https://www.muniarequipa.gob.pe/arequipa-sin-violencia/" target="_blank" rel="noopener">Arequipa sin Violencia ↗</a>
+            <a class="btn outline" href="https://www.gob.pe/51970-red-de-servicios" target="_blank" rel="noopener">Red nacional ↗</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Emergencias · Policía Nacional</h3>
+          <div class="number">105</div>
+          <p>Para solicitar ayuda policial ante una emergencia.</p>
+          <div class="actions"><a class="btn alt" href="tel:105">Llamar al 105</a></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <strong>UNIVERSIDAD NACIONAL DE SAN AGUSTÍN DE AREQUIPA</strong>
+      <p>Por una UNSA segura, libre de violencia y discriminación.</p>
+      <p class="small">Proyecto informativo. Verifica horarios y datos de contacto en los sitios oficiales antes de acudir. Esta página no reemplaza los servicios de emergencia.</p>
+    </div>
+  </footer>
+</body>
+</html>
